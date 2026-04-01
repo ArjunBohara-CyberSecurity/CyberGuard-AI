@@ -462,16 +462,5 @@ if __name__ == "__main__":
         )
         print("CyberGuardAI running at http://127.0.0.1:5000")
         serve(app, host="127.0.0.1", port=5000)
-    except Exception:
-        print(
-            r"""
-  ____        _               ____                 _      ___ 
- / ___| _   _| |__   ___ _ __/ ___|_   _  __ _ _ __| | ___|_ _|
-| |    | | | | '_ \ / _ \ '__| |  _| | | |/ _` | '__| |/ / | | 
-| |___ | |_| | |_) |  __/ |  | |_| | |_| | (_| | |  |   <  | | 
- \____| \__,_|_.__/ \___|_|   \____|\__,_|\__,_|_|  |_|\_\|___|
-                      CyberGuard AI
-"""
-        )
-        print("CyberGuardAI running at http://127.0.0.1:5000")
-        app.run(debug=False)
+    except:
+        print("Script Failed!!")

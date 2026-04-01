@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberGuardAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="logo">CyberGuardAI</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#scanner">Threat Scanner</a>
+        <a href="#deepfake">Deepfake Detector</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-text">
+          <h1>Digital Safety, Made Simple</h1>
+          <p>
+            CyberGuardAI helps everyday users check messages, links, and images
+            for scam and deepfake risks in seconds. Everything runs locally for
+            privacy.
+          </p>
+          <div class="privacy-banner">
+            🔒 Your data is processed locally and never leaves your device
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="stat">
+            <span class="stat-label">Threat Scanner</span>
+            <span class="stat-value">Text + Links</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Deepfake Detector</span>
+            <span class="stat-value">Image Checks</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Local AI Model</span>
+            <span class="stat-value">{{ model_name }} @ 11434</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="scanner" class="section">
+        <div class="section-header">
+          <h2>Threat Scanner</h2>
+          <p>Paste a message or link. We score risk using logic-based checks.</p>
+        </div>
+        <div class="panel">
+          <textarea id="scan-input" placeholder="Paste a message or link here..."></textarea>
+          <button id="scan-btn" class="glow-button">Scan Threat</button>
+          <div id="scan-result" class="result-card hidden">
+            <div class="result-header">
+              <span id="risk-badge" class="badge">SAFE</span>
+              <span id="risk-score">Confidence: 0%</span>
+            </div>
+            <div class="meter">
+              <div id="meter-fill" class="meter-fill"></div>
+            </div>
+            <p id="risk-explanation" class="result-text"></p>
+            <ul id="risk-reasons" class="reason-list"></ul>
+            <div class="impact" id="risk-impact"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="deepfake" class="section">
+        <div class="section-header">
+          <h2>Deepfake Image Detector</h2>
+          <p>Upload an image to check for lighting, texture, and edge issues.</p>
+        </div>
+        <div class="panel">
+          <div class="upload-area">
+            <input type="file" id="image-input" accept="image/*" />
+            <label for="image-input" class="upload-label">Choose Image</label>
+            <img id="image-preview" alt="Preview" />
+          </div>
+          <button id="image-btn" class="glow-button">Analyze Image</button>
+          <div id="image-result" class="result-card hidden">
+            <div class="result-header">
+              <span id="image-badge" class="badge">REAL</span>
+              <span id="image-score">Confidence: 0%</span>
+            </div>
+            <div class="meter">
+              <div id="image-meter-fill" class="meter-fill"></div>
+            </div>
+            <p id="image-explanation" class="result-text"></p>
+            <ul id="image-reasons" class="reason-list"></ul>
+            <div class="impact" id="image-impact"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-header">
+          <h2>Why It Matters</h2>
+          <p>
+            CyberGuardAI is not a hacker tool. It is a digital safety platform
+            designed to protect everyday users from scams, deepfakes, and online
+            threats with clear, friendly guidance.
+          </p>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Built for Beginners</h3>
+            <p>Simple wording, clear risk levels, and no technical jargon.</p>
+          </div>
+          <div class="about-card">
+            <h3>Privacy First</h3>
+            <p>Everything runs locally. Your data stays on your device.</p>
+          </div>
+          <div class="about-card">
+            <h3>Student Project</h3>
+            <p>Created to help friends and family stay safe online.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Built by Arjun Bohara
+    </footer>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/CyberGuardAI-Digital%20Safety%20Platform-000000?style=for-the-badge&logo=hackaday&logoColor=red&labelColor=000000&color=8B0000" />
+  <img src="https://img.shields.io/badge/CyberGuardAI-Protect%20%7C%20Detect%20%7C%20Secure-000000?style=for-the-badge&logo=security&logoColor=red&labelColor=000000&color=8B0000" />
 </p>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Purpose-User%20Protection-8B0000?style=flat-square&logo=shield&logoColor=white"/>
